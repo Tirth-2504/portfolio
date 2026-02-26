@@ -126,17 +126,17 @@ export default function App() {
             <div className="space-y-6">
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-2 text-xs font-mono opacity-60">
-                  <MapPin size={14} /> Red Deer, AB, Canada
+                  <MapPin size={14} /> Calgary, AB, Canada
                 </div>
                 <div className="flex items-center gap-2 text-xs font-mono opacity-60">
-                  <Mail size={14} /> tirth7411@gmail.com
+                  <Mail size={14} /> tirth294500@gmail.com
                 </div>
                 <div className="flex items-center gap-2 text-xs font-mono opacity-60">
                   <Phone size={14} /> (587) 377-6738
                 </div>
               </div>
               <div className="flex gap-4">
-                <a href="https://github.com" className="p-3 border border-line hover:bg-ink hover:text-bg transition-all"><Github size={20} /></a>
+                <a href="https://github.com/Tirth-2504" className="p-3 border border-line hover:bg-ink hover:text-bg transition-all"><Github size={20} /></a>
                 <a href="https://linkedin.com" className="p-3 border border-line hover:bg-ink hover:text-bg transition-all"><Linkedin size={20} /></a>
               </div>
             </div>
