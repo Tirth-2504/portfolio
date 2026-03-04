@@ -5,7 +5,6 @@ import {
   Mail, 
   MapPin, 
   Phone, 
-  Download, 
   ArrowUpRight,
   Terminal,
   Database,
