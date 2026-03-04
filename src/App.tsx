@@ -87,9 +87,6 @@ export default function App() {
             <a href="#skills" className="hover:opacity-50 transition-opacity">Skills</a>
             <a href="#contact" className="hover:opacity-50 transition-opacity">Contact</a>
           </div>
-          <button className="bg-ink text-bg px-4 py-2 text-[10px] font-mono uppercase tracking-tighter hover:opacity-90 transition-opacity flex items-center gap-2">
-            Resume <Download size={12} />
-          </button>
         </div>
       </nav>
 
