@@ -232,18 +232,6 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
-              <Cpu size={24} /> BACKGROUND
-            </h2>
-            <div className="border-l-2 border-line pl-6 py-2">
-              <div className="text-xl font-bold">Kitchen Helper</div>
-              <div className="font-serif italic opacity-60">Firehouse Subs | 2024 — 2025</div>
-              <div className="mt-4 text-sm opacity-70 leading-relaxed">
-                Developed strong reliability, attention to detail, and team collaboration skills in high-pressure environments.
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Footer / Contact */}
