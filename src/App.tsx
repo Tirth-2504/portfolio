@@ -5,6 +5,7 @@ import {
   Mail, 
   MapPin, 
   Phone, 
+  Download, 
   ArrowUpRight,
   Terminal,
   Database,
@@ -22,14 +23,38 @@ export default function App() {
       category: "Sustainability / AI",
       description: "A data-heavy platform that uses Gemini API to analyze corporate environmental reports and generate compliance scores. Features real-time carbon footprint visualization.",
       tech: ["Python", "FastAPI", "Gemini API", "D3.js", "PostgreSQL"],
-      github: "#"
+      github: "#",
+      process: {
+        problem: "Mid-sized companies struggle to track and report their carbon footprint accurately to meet new 2026 environmental compliance laws, often relying on manual, error-prone spreadsheet data entry.",
+        technologies: "Python, FastAPI (for high-performance async endpoints), Gemini API (for parsing unstructured PDF reports), PostgreSQL (for relational data integrity), and D3.js (for visualization).",
+        features: [
+          "Automated PDF report parsing via LLM",
+          "Real-time carbon footprint dashboard",
+          "Automated compliance score generation"
+        ],
+        challenges: "The Gemini API occasionally returned inconsistently formatted JSON when parsing highly complex, multi-column PDF tables from different corporate reporting standards.",
+        solutions: "Implemented strict JSON schema validation using Pydantic. Added a retry mechanism with exponential backoff and refined system prompts to strictly enforce the output structure.",
+        lessons: "LLMs are powerful but non-deterministic. Always build robust error handling and validation layers when integrating AI into traditional, strict data pipelines."
+      }
     },
     {
       title: "Azure Sentinel Flow",
       category: "Cloud / DevOps",
       description: "Event-driven supply chain monitoring system built on Azure Functions. Uses Service Bus for message orchestration and provides a real-time dashboard for logistics tracking.",
       tech: [".NET 8", "C#", "Azure Functions", "Service Bus", "React"],
-      github: "#"
+      github: "#",
+      process: {
+        problem: "Supply chain managers lacked real-time visibility into logistics events, causing delays in identifying bottlenecks.",
+        technologies: ".NET 8, Azure Functions, Azure Service Bus, React, SignalR",
+        features: [
+          "Event-driven architecture",
+          "Real-time logistics dashboard",
+          "Automated alert routing"
+        ],
+        challenges: "Ensuring messages were processed in order and handling dead-letter queues effectively during high-traffic spikes.",
+        solutions: "Implemented Azure Service Bus sessions to guarantee FIFO ordering and created a robust dead-letter queue monitoring system.",
+        lessons: "Designing for failure is critical in distributed systems. Always assume components will fail and build resilient retry mechanisms."
+      }
     },
     {
       title: "SecureID Manager",
@@ -122,17 +147,17 @@ export default function App() {
             <div className="space-y-6">
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-2 text-xs font-mono opacity-60">
-                  <MapPin size={14} /> Calgary, AB, Canada
+                  <MapPin size={14} /> Red Deer, AB, Canada
                 </div>
                 <div className="flex items-center gap-2 text-xs font-mono opacity-60">
-                  <Mail size={14} /> tirth294500@gmail.com
+                  <Mail size={14} /> tirth7411@gmail.com
                 </div>
                 <div className="flex items-center gap-2 text-xs font-mono opacity-60">
                   <Phone size={14} /> (587) 377-6738
                 </div>
               </div>
               <div className="flex gap-4">
-                <a href="https://github.com/Tirth-2504" className="p-3 border border-line hover:bg-ink hover:text-bg transition-all"><Github size={20} /></a>
+                <a href="https://github.com" className="p-3 border border-line hover:bg-ink hover:text-bg transition-all"><Github size={20} /></a>
                 <a href="https://linkedin.com" className="p-3 border border-line hover:bg-ink hover:text-bg transition-all"><Linkedin size={20} /></a>
               </div>
             </div>
@@ -146,7 +171,7 @@ export default function App() {
             <div className="font-serif italic opacity-50 text-sm">2024 — 2026</div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line">
-            {projects.map((project, idx) => (
+            {projects.map((project: any, idx) => (
               <ProjectCard 
                 key={idx} 
                 title={project.title}
@@ -154,6 +179,9 @@ export default function App() {
                 description={project.description}
                 tech={project.tech}
                 github={project.github}
+                githubLink={project.githubLink}
+                demoLink={project.demoLink}
+                process={project.process}
               />
             ))}
           </div>
@@ -201,6 +229,18 @@ export default function App() {
               <div className="font-serif italic opacity-60">Red Deer Polytechnic, Canada</div>
               <div className="mt-4 text-sm opacity-70 leading-relaxed">
                 Focus on Object-Oriented Programming, Data Structures, Software Engineering, and Distributed Systems.
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
+              <Cpu size={24} /> BACKGROUND
+            </h2>
+            <div className="border-l-2 border-line pl-6 py-2">
+              <div className="text-xl font-bold">Kitchen Helper</div>
+              <div className="font-serif italic opacity-60">Firehouse Subs | 2024 — 2025</div>
+              <div className="mt-4 text-sm opacity-70 leading-relaxed">
+                Developed strong reliability, attention to detail, and team collaboration skills in high-pressure environments.
               </div>
             </div>
           </div>
