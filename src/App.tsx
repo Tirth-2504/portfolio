@@ -61,28 +61,76 @@ export default function App() {
       category: "Security / Compliance",
       description: "A decentralized identity management system focused on GDPR compliance. Implements zero-knowledge proofs for user verification without data exposure.",
       tech: ["TypeScript", "Node.js", "Cryptography", "SQLite", "Express"],
-      github: "#"
+      github: "#",
+      process: {
+        problem: "Traditional identity management systems often store sensitive user data centrally, creating a single point of failure and risking privacy breaches.",
+        technologies: "TypeScript, Node.js, Cryptography, SQLite, Express.",
+        features: [
+          "Zero-knowledge proof verification",
+          "GDPR-compliant data handling",
+          "Decentralized architecture"
+        ],
+        challenges: "Implementing complex cryptographic proofs in a performant manner while ensuring an intuitive user experience.",
+        solutions: "Used efficient zero-knowledge proof libraries and optimized the verification workflow to minimize latency.",
+        lessons: "Privacy-focused design requires careful consideration of both security and usability from the start."
+      }
     },
     {
       title: "AutoAudit Pro",
       category: "FinTech / Compliance",
       description: "Automated auditing tool for financial transactions. Uses machine learning to detect anomalies and flags potential compliance violations in real-time.",
       tech: ["Java", "Spring Boot", "TensorFlow", "SQL Server", "Docker"],
-      github: "#"
+      github: "#",
+      process: {
+        problem: "Manual auditing of large volumes of financial transactions is slow, error-prone, and often fails to detect sophisticated fraud or compliance issues.",
+        technologies: "Java, Spring Boot, TensorFlow, SQL Server, Docker.",
+        features: [
+          "Real-time anomaly detection",
+          "Automated compliance flagging",
+          "High-throughput transaction processing"
+        ],
+        challenges: "Training machine learning models to accurately distinguish between legitimate transactions and potential violations with low false-positive rates.",
+        solutions: "Developed a multi-stage ML pipeline using TensorFlow and leveraged historical transaction data to refine model accuracy.",
+        lessons: "Data quality is paramount in financial auditing; robust data preprocessing is essential for effective machine learning."
+      }
     },
     {
       title: "EdgeSense IoT",
       category: "IoT / Data",
       description: "Dashboard for monitoring industrial IoT sensors at the edge. Optimized for low-latency data visualization and predictive maintenance alerts.",
       tech: ["Go", "MQTT", "InfluxDB", "React", "WebSockets"],
-      github: "#"
+      github: "#",
+      process: {
+        problem: "Industrial environments require real-time monitoring of numerous sensors, but high latency can lead to delayed responses to critical equipment failures.",
+        technologies: "Go, MQTT, InfluxDB, React, WebSockets.",
+        features: [
+          "Low-latency data visualization",
+          "Predictive maintenance alerts",
+          "Edge-focused monitoring"
+        ],
+        challenges: "Managing high-frequency data streams from multiple sensors without overwhelming the dashboard or causing performance lag.",
+        solutions: "Utilized MQTT for efficient message queuing and WebSockets for real-time dashboard updates, ensuring minimal latency.",
+        lessons: "Optimized data protocols and efficient time-series storage are crucial for building responsive industrial IoT applications."
+      }
     },
     {
       title: "EduPath Generator",
       category: "EdTech / AI",
       description: "Personalized learning path generator that adapts to student performance. Uses LLMs to curate resources and create custom study plans.",
       tech: ["Next.js", "OpenAI API", "Tailwind CSS", "Supabase"],
-      github: "#"
+      github: "#",
+      process: {
+        problem: "Students often struggle to find relevant learning materials that match their current skill level and learning goals, leading to inefficient study habits.",
+        technologies: "Next.js, OpenAI API, Tailwind CSS, Supabase.",
+        features: [
+          "AI-powered resource curation",
+          "Adaptive learning paths",
+          "Personalized study plans"
+        ],
+        challenges: "Ensuring the LLM generates accurate and pedagogicaly sound learning paths based on diverse student inputs.",
+        solutions: "Refined system prompts and implemented a feedback loop where student performance data is used to continuously tune the generated paths.",
+        lessons: "AI can significantly enhance personalized education, but it requires careful guidance and data-driven feedback to be truly effective."
+      }
     }
   ];
 
