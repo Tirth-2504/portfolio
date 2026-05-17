@@ -1,3 +1,5 @@
+// --- All previous JS features (Theme, Filters, Intersections, Form Handler) remain unchanged here ---
+
 // Global Configuration Elements Access Nodes
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
@@ -49,7 +51,7 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            observer.unobserve(entry.target); // Stops computing operations once elements render active
+            observer.unobserve(entry.target);
         }
     });
 }, { threshold: 0.15 });
@@ -63,17 +65,14 @@ const status = document.getElementById('form-status');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(form);
-    
     status.innerHTML = "Processing data delivery...";
     status.className = "";
-
     try {
         const response = await fetch(form.action, {
             method: form.method,
             body: data,
             headers: { 'Accept': 'application/json' }
         });
-
         if (response.ok) {
             status.innerHTML = "Success! Message dispatched directly to Tirth.";
             status.className = "success";
@@ -89,10 +88,33 @@ form.addEventListener('submit', async (e) => {
     }
 });
 
-// Mobile Layout Toggles
 mobileMenu.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     const icon = mobileMenu.querySelector('i');
     icon.classList.toggle('fa-bars');
     icon.classList.toggle('fa-times');
 });
+
+
+// --- NEW FEATURE 5: Recruiter Console Matrix Logic ---
+try {
+    console.clear();
+    console.log(
+        "%c👋 Hello Engineering Recruiter / Technical Inspector!", 
+        "background: #2563eb; color: #ffffff; font-size: 16px; font-weight: bold; padding: 8px 12px; border-radius: 4px;"
+    );
+    console.log(
+        "%cThank you for inspecting my portfolio code base. I specialize in building high-throughput backend distribution layers, real-time socket clusters, and performance-optimized web architectures.", 
+        "color: #334155; font-size: 13px; font-weight: 500; line-height: 1.5; margin: 8px 0;"
+    );
+    console.log(
+        "%c🎯 Open Roles Target: Full-Stack Engineering, Backend Systems Developer, Cloud Applications Architect.",
+        "color: #06b6d4; font-size: 13px; font-weight: bold;"
+    );
+    console.log(
+        "%c📧 Drop an email straight to: tirth7411@gmail.com",
+        "color: #2563eb; font-size: 12px; font-style: italic; text-decoration: underline;"
+    );
+} catch (e) {
+    // Gracefully handle older client browsers lacking styled console support rules
+}

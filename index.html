@@ -39,11 +39,18 @@
                 <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-            <a href="#projects" class="btn">Explore My Work</a>
+            
+            <!-- Dual CTA Buttons Container -->
+            <div class="hero-ctas">
+                <a href="#projects" class="btn">Explore My Work</a>
+                <!-- Professional Download Asset Trigger (Points to local assets folder copy) -->
+                <a href="assets/Tirth_Patel_Resume.pdf" download="Tirth_Vasantkumar_Patel_Resume.pdf" class="btn btn-secondary">
+                    <i class="fas fa-file-download"></i> Download Resume
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Adding class reveal for structural fade-in entry effects -->
     <section id="about" class="section reveal">
         <h2 class="section-title">Education Journey</h2>
         <div class="education-card">
@@ -140,7 +147,6 @@
         </div>
     </section>
 
-    <!-- Upgraded Contact Section with Formspree Endpoint -->
     <section id="contact" class="section contact-section bg-light reveal">
         <h2>Let's Connect & Build Something Great</h2>
         <p>Open to Full-Stack Engineering roles, Backend Systems positions, and Cloud Application Architecture roles globally.</p>
@@ -151,8 +157,7 @@
                 <p class="contact-detail"><i class="fas fa-map-marker-alt"></i> Calgary, AB, Canada</p>
             </div>
 
-            <!-- Replace 'YOUR_FORMSPREE_ENDPOINT_ID' with your real code from Formspree -->
-            <form id="contact-form" action="https://formspree.io" method="POST" class="contact-form-element">
+            <form id="contact-form" action="https://formspree.io/f/xeedjzwz" method="POST" class="contact-form-element">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
                 </div>
