@@ -1,207 +1,177 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tirth Patel | Software Engineer Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        googleBlue: '#4285F4',
-                        googleRed: '#EA4335',
-                        googleYellow: '#FBBC05',
-                        googleGreen: '#34A853',
-                        darkBg: '#0F172A',
-                        darkCard: '#1E293B',
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Tirth Vasantkumar Patel | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
-<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-googleBlue selection:text-white">
+<body>
 
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full bg-darkBg/80 backdrop-blur-md z-50 border-b border-slate-800">
-        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-tight bg-gradient-to-r from-googleBlue via-googleRed to-googleGreen bg-clip-text text-transparent">tirthpatel.dev</a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
-                <a href="#about" class="hover:text-googleBlue transition">About</a>
-                <a href="#skills" class="hover:text-googleBlue transition">Skills</a>
-                <a href="#projects" class="hover:text-googleBlue transition">Projects</a>
-                <a href="#education" class="hover:text-googleBlue transition">Education</a>
-                <a href="#contact" class="hover:text-googleBlue transition">Contact</a>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Tirth<span>.dev</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center pt-24 px-6 max-w-4xl mx-auto text-center md:text-left">
-        <div class="space-y-6">
-            <div class="inline-flex items-center space-x-2 bg-slate-800/60 px-3 py-1 rounded-full text-xs text-slate-300 border border-slate-700">
-                <span class="w-2 h-2 rounded-full bg-googleGreen animate-pulse"></span>
-                <span>Open to Junior Software Engineer Roles</span>
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Tirth Vasantkumar Patel</span></h1>
+            <h2>Software Development Graduate & Full-Stack Architect</h2>
+            <p>Based in Calgary, AB. Specializing in high-throughput backend distribution systems, real-time architectures, and machine learning models.</p>
+            <div class="social-icons">
+                <a href="mailto:tirth7411@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
-                Hi, I'm <span class="text-googleBlue">Tirth Patel</span>.
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
-                Software Development Graduate building high-performance full-stack web architectures, distributed microservices, and predictive analytics data pipelines.
-            </p>
-            <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
-                <a href="#projects" class="bg-googleBlue hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg shadow-lg shadow-googleBlue/20 transition text-sm">View My Work</a>
-                <a href="mailto:tirthpatel7411@gmail.com" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-medium px-6 py-3 rounded-lg transition text-sm">Contact Me</a>
+            <a href="#projects" class="btn">Explore My Work</a>
+        </div>
+    </section>
+
+    <!-- Adding class reveal for structural fade-in entry effects -->
+    <section id="about" class="section reveal">
+        <h2 class="section-title">Education Journey</h2>
+        <div class="education-card">
+            <h3>Diploma in Software Development</h3>
+            <h4>Red Deer Polytechnic — Red Deer, AB, Canada</h4>
+            <span class="date">Graduation: September 2025</span>
+            <p><strong>Core Coursework:</strong> Data Structures & Algorithms, Advanced Object-Oriented Programming, Database Management Systems, Distributed Architectures, Machine Learning Fundamentals.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-light reveal">
+        <h2 class="section-title">Technical Skillset Matrix</h2>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3><i class="fas fa-code"></i> Languages</h3>
+                <p>JavaScript (ES6+), Python, C# (.NET), TypeScript, SQL (PostgreSQL, MySQL), HTML5, CSS3</p>
+            </div>
+            <div class="skills-category">
+                <h3><i class="fas fa-layer-group"></i> Frameworks & Libs</h3>
+                <p>React.js, Node.js, Express, ASP.NET Core, Redis, Pandas, Scikit-Learn, NumPy</p>
+            </div>
+            <div class="skills-category">
+                <h3><i class="fas fa-cloud"></i> Cloud & Databases</h3>
+                <p>Amazon S3, MongoDB, Docker, Git, Linux Environment, Postman, Jira, Confluence</p>
+            </div>
+            <div class="skills-category">
+                <h3><i class="fas fa-cogs"></i> Methodologies</h3>
+                <p>Distributed Systems, RESTful API Design, System Architecture, OOP, CI/CD, Agile/Scrum</p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 px-6 max-w-5xl mx-auto border-t border-slate-800/60">
-        <h2 class="text-2xl font-bold mb-8 flex items-center gap-2"><span class="text-googleBlue">01.</span> About Me</h2>
-        <div class="bg-darkCard border border-slate-800 p-8 rounded-xl max-w-3xl leading-relaxed text-slate-300 space-y-4">
-            <p>
-                I am an analytical, metric-driven software developer graduating from Red Deer Polytechnic in September 2026. I specialize in designing scalable system backends, implementing secure RESTful ecosystems, and engineering data pipelines.
-            </p>
-            <p>
-                With a near-perfect academic track record in full-stack architecture and relational databases (96%), my focus lies in optimizing data flow pathways, cutting query execution delays, and leveraging Agile frameworks to deliver clean, modern code templates.
-            </p>
+    <section id="projects" class="section reveal">
+        <h2 class="section-title">Featured Engineering Projects</h2>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Ecosystems</button>
+            <button class="filter-btn" data-filter="react">React / UI</button>
+            <button class="filter-btn" data-filter="node">Node.js Backend</button>
+            <button class="filter-btn" data-filter="python">Python / ML</button>
+            <button class="filter-btn" data-filter="docker">Cloud & Docker</button>
         </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 px-6 max-w-5xl mx-auto border-t border-slate-800/60">
-        <h2 class="text-2xl font-bold mb-8 flex items-center gap-2"><span class="text-googleRed">02.</span> Core Tech Stack</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-darkCard border border-slate-800 p-6 rounded-xl">
-                <h3 class="text-sm font-semibold tracking-wider text-slate-400 uppercase mb-4">Languages</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">JavaScript (ES6+)</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">TypeScript</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">Python</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">C# (.NET)</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">SQL (PostgreSQL/MySQL)</span>
-                </div>
-            </div>
-            <div class="bg-darkCard border border-slate-800 p-6 rounded-xl">
-                <h3 class="text-sm font-semibold tracking-wider text-slate-400 uppercase mb-4">Frameworks & Libs</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">React.js</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">Node.js / Express</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">ASP.NET Core</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">Pandas / NumPy</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">Scikit-Learn</span>
-                </div>
-            </div>
-            <div class="bg-darkCard border border-slate-800 p-6 rounded-xl">
-                <h3 class="text-sm font-semibold tracking-wider text-slate-400 uppercase mb-4">Cloud & Infrastructure</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">Amazon S3</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">MongoDB</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">Docker</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">Git / GitHub</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">Linux CLI</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6 max-w-5xl mx-auto border-t border-slate-800/60">
-        <h2 class="text-2xl font-bold mb-12 flex items-center gap-2"><span class="text-googleYellow">03.</span> Impact Projects</h2>
-        <div class="space-y-12">
-            <!-- Project 1 -->
-            <div class="bg-darkCard border border-slate-800 rounded-xl p-8 hover:border-slate-700 transition">
-                <div class="flex justify-between items-start flex-wrap gap-4 mb-4">
-                    <div>
-                        <span class="text-xs text-googleBlue uppercase font-bold tracking-wider">Capstone Project — Grade: 95%</span>
-                        <h3 class="text-xl font-bold text-white mt-1">Scalable Full-Stack E-Commerce Platform</h3>
-                    </div>
-                    <div class="flex gap-2 text-xs bg-slate-800 px-3 py-1 rounded border border-slate-700 text-slate-400">
-                        React.js · Node.js · Express · MongoDB
-                    </div>
-                </div>
-                <ul class="space-y-2 text-slate-300 text-sm list-disc pl-5">
-                    <li>Engineered structural designs for secure RESTful ecosystems processing store orders.</li>
-                    <li>Designed responsive views, earning a <strong class="text-googleBlue">96% performance and design setup rating</strong>.</li>
-                    <li>Created localized index maps in MongoDB, dropping data query delay cycles by <strong class="text-googleBlue">35%</strong>.</li>
+        <div class="projects-grid">
+            <div class="project-card" data-tech="node docker">
+                <h3>Real-Time Distributed Chat Application</h3>
+                <div class="tech-stack">Node.js, Express, WebSocket, Redis, Docker, PostgreSQL</div>
+                <ul>
+                    <li>Architected real-time bi-directional messaging with sub-100ms latency.</li>
+                    <li>Scaled message broadcasting horizontally via custom Redis Pub/Sub layers.</li>
+                    <li>Designed optimized PostgreSQL relational schemas using efficient composite indexing.</li>
                 </ul>
             </div>
 
-            <!-- Project 2 -->
-            <div class="bg-darkCard border border-slate-800 rounded-xl p-8 hover:border-slate-700 transition">
-                <div class="flex justify-between items-start flex-wrap gap-4 mb-4">
-                    <div>
-                        <span class="text-xs text-googleGreen uppercase font-bold tracking-wider">Machine Learning Implementation — Grade: 90%</span>
-                        <h3 class="text-xl font-bold text-white mt-1">Predictive Analytics Engine & Data Pipeline</h3>
-                    </div>
-                    <div class="flex gap-2 text-xs bg-slate-800 px-3 py-1 rounded border border-slate-700 text-slate-400">
-                        Python · Pandas · Scikit-Learn · SQL
-                    </div>
-                </div>
-                <ul class="space-y-2 text-slate-300 text-sm list-disc pl-5">
-                    <li>Deployed classification scripts (Logistic Regression, Random Forests) reaching <strong class="text-googleGreen">92% validation accuracy</strong>.</li>
-                    <li>Constructed data flow pipelines to parse, standardize, and score behavioral tables.</li>
-                    <li>Formed target parameter matrices utilizing advanced relational SQL query combinations.</li>
+            <div class="project-card" data-tech="react">
+                <h3>Algorithmic Pathfinding & Graph Visualizer</h3>
+                <div class="tech-stack">TypeScript, React.js, HTML5 Canvas, CSS Grid</div>
+                <ul>
+                    <li>Engineered interactive visual layers for Dijkstra’s, A*, and BFS traversal models.</li>
+                    <li>Minimized runtime execution using custom structured min-heaps and priority queues.</li>
+                    <li>Built an immutable structural state engine avoiding core visual performance lags.</li>
+                </ul>
+            </div>
+
+            <div class="project-card" data-tech="react node">
+                <h3>Scalable Full-Stack E-Commerce Platform</h3>
+                <div class="tech-stack">React.js, Node.js, Express, MongoDB, REST APIs</div>
+                <ul>
+                    <li>Decoupled storefront using secure high-throughput RESTful API endpoints.</li>
+                    <li>Optimized assets runtime rendering via explicit lazy loading routines within React.js components.</li>
+                    <li>Reduced database query latency by 35% through custom-tailored MongoDB indexing strategies.</li>
+                </ul>
+            </div>
+
+            <div class="project-card" data-tech="python">
+                <h3>Predictive Analytics Engine & Data Pipeline</h3>
+                <div class="tech-stack">Python, Pandas, Scikit-Learn, NumPy, PostgreSQL</div>
+                <ul>
+                    <li>Engineered automated pipelines targeting ingestion and structuring of consumer data.</li>
+                    <li>Achieved 92% retention forecasting accuracy leveraging multi-variable Random Forest evaluation models.</li>
+                    <li>Constructed advanced SQL multi-table query joins and optimized analytic window definitions.</li>
+                </ul>
+            </div>
+
+            <div class="project-card" data-tech="python docker">
+                <h3>Containerized Microservice Log Aggregator</h3>
+                <div class="tech-stack">Python, Docker, Amazon S3, FastAPI, Bash Scripting</div>
+                <ul>
+                    <li>Created centralized agents scanning, parsing, and centralizing systemic multi-format application logs.</li>
+                    <li>Streamlined secure asynchronous data serialization targets moving compressed structures straight into Amazon S3 buckets.</li>
+                    <li>Engineered robust shell automated routines handling isolated environmental status validations.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-24 px-6 max-w-5xl mx-auto border-t border-slate-800/60">
-        <h2 class="text-2xl font-bold mb-8 flex items-center gap-2"><span class="text-googleGreen">04.</span> Education & Targets</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-darkCard border border-slate-800 p-6 rounded-xl">
-                <span class="text-xs font-semibold text-googleBlue">Red Deer Polytechnic</span>
-                <h3 class="text-lg font-bold text-white mt-1">Diploma in Software Development</h3>
-                <p class="text-xs text-slate-400 mt-1">Expected Graduation: September 2026</p>
-                <div class="mt-4 space-y-1 text-sm text-slate-300">
-                    <p>• Client-side Web Development (Grade: 96%)</p>
-                    <p>• Introduction to Databases (Grade: 96%)</p>
-                    <p>• Software Project Capstone (Grade: 95%)</p>
-                </div>
+    <!-- Upgraded Contact Section with Formspree Endpoint -->
+    <section id="contact" class="section contact-section bg-light reveal">
+        <h2>Let's Connect & Build Something Great</h2>
+        <p>Open to Full-Stack Engineering roles, Backend Systems positions, and Cloud Application Architecture roles globally.</p>
+        
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <p class="contact-detail"><i class="fas fa-envelope"></i> tirth7411@gmail.com</p>
+                <p class="contact-detail"><i class="fas fa-map-marker-alt"></i> Calgary, AB, Canada</p>
             </div>
-            <div class="bg-darkCard border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
-                <div>
-                    <h3 class="text-sm font-semibold tracking-wider text-slate-400 uppercase mb-4">Certification Targets (June 2026)</h3>
-                    <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-googleYellow"></span>
-                            AWS Certified Solutions Architect – Associate
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-googleYellow"></span>
-                            Professional Scrum Master I (PSM I)
-                        </li>
-                    </ul>
+
+            <!-- Replace 'YOUR_FORMSPREE_ENDPOINT_ID' with your real code from Formspree -->
+            <form id="contact-form" action="https://formspree.io" method="POST" class="contact-form-element">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
                 </div>
-            </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email Address" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+                </div>
+                <button type="submit" class="btn form-submit-btn">Send Message</button>
+                <div id="form-status"></div>
+            </form>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 max-w-3xl mx-auto text-center border-t border-slate-800/60">
-        <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
-        <p class="text-slate-400 mb-8 text-sm max-w-md mx-auto">
-            I am currently seeking Junior Software Engineer opportunities. Let's talk about how I can bring full-stack performance to your team.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm font-medium text-slate-300">
-            <a href="mailto:tirthpatel7411@gmail.com" class="hover:text-googleBlue transition">tirthpatel7411@gmail.com</a>
-            <span class="hidden sm:inline text-slate-600">|</span>
-            <span>+1 (587) 377-6738</span>
-            <span class="hidden sm:inline text-slate-600">|</span>
-            <span>Calgary, AB, Canada</span>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-900">
-        <p>© 2026 Tirth Patel. Built with HTML and Tailwind CSS.</p>
+    <footer>
+        <p>&copy; 2026 Tirth Vasantkumar Patel. Built with clean CSS and native JavaScript architectures.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
